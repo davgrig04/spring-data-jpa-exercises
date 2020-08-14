@@ -13,14 +13,14 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package org.springframework.data.samples._01_jpa;
+package org.springframework.data.samples.jpa;
 
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.data.samples._01_jpa.domain.Customer;
+import org.springframework.data.samples.jpa.domain.Customer;
 
-public interface CustomersRepository extends PagingAndSortingRepository<Customer,Long>/* TODO */ {
+public interface CustomersRepository extends Repository<Customer, Long>/* TODO */ {
 
     /**
      * Find customers whose first and last names are of equal length, {@code l}.

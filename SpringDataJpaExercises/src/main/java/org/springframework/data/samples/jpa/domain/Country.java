@@ -13,7 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package org.springframework.data.samples._01_jpa.domain;
+package org.springframework.data.samples.jpa.domain;
 
 import javax.persistence.*;
 

@@ -9,6 +9,7 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+    id "io.freefair.lombok" version "5.1.1"
 }
 
 repositories {
@@ -19,7 +20,8 @@ repositories {
 
 dependencies {
     implementation ( group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: "2.2.4.RELEASE" )
-
+    compileOnly (group: 'org.projectlombok', name: 'lombok', version: '1.18.8')
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
     testImplementation ( group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: "2.2.4.RELEASE" )
     testImplementation(group: 'com.h2database', name: 'h2', version: '1.4.199')	
     testImplementation 'junit:junit:4.12'

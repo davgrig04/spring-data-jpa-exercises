@@ -10,9 +10,9 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<jpa:repositories base-package="org.springframework.data.samples._01_jpa" />
+	<jpa:repositories base-package="org.springframework.data.samples.jpa" />
 
-	<context:component-scan base-package="org.springframework.data.samples._01_jpa" />
+	<context:component-scan base-package="org.springframework.data.samples.jpa" />
 
 	<bean class="org.springframework.orm.jpa.JpaTransactionManager"
 		id="transactionManager">
@@ -29,7 +29,7 @@
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="org.springframework.data.samples._01_jpa" />
+		<property name="packagesToScan" value="org.springframework.data.samples.jpa" />
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<property name="databasePlatform" value="org.hibernate.dialect.H2Dialect" />

@@ -13,7 +13,9 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package org.springframework.data.samples._01_jpa.domain;
+package org.springframework.data.samples.jpa.domain;
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -43,6 +45,21 @@ public class Customer {
 	@ManyToOne
 	@JoinColumn(name="address_id")
 	private Address address;
+	
+	@Column(name="active")
+	private Boolean active;
+	
+	@Column(name="create_date")
+	private Date createdDate;
+
+	@Column(name="last_update")
+	private Date updatedDate;
+	
+	public Customer() {}
+	
+	public Customer(Boolean active) {
+		this.active = active;
+	}
 
 	public Long getId() {
 		return id;
@@ -84,4 +101,29 @@ public class Customer {
 		this.address = address;
 	}
 
+	public Boolean getActive() {
+		return active;
+	}
+
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public Date getUpdatedDate() {
+		return updatedDate;
+	}
+
+	public void setUpdatedDate(Date updatedDate) {
+		this.updatedDate = updatedDate;
+	}
+	
+	
 }
